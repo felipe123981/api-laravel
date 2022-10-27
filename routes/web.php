@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
+Route::get('/user/{user:id}', function(\App\Models\User $user) {
+	return $user;
+});
+
 Route::prefix('usuarios')->group(function() {
 	Route::get('', function() {
 		return 'usuario';
